@@ -116,3 +116,22 @@ const questions = [
         ]
     }
 ]
+
+// Timer Function
+var secondsLeft = 76
+var timerInterval
+function startTimer() {
+    timerInterval = setInterval(function() {
+        secondsLeft --
+        timer.textContent="Time: " + secondsLeft + "seconds"
+
+        // if time runs out
+        if (secondsLeft === 0) {
+            clearInterval(timerInterval)
+            quizSection.styledisplay = "none"
+            initialsSection.styledisplay.display = "inline"
+        }
+    }, 1000)
+    return timerInterval
+}
+

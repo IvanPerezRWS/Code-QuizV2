@@ -8,6 +8,9 @@
     <title>Code Quiz</title>
 </head>
 <body>
+    <div class="rowheader">
+        <span id="timer">Time: 75 seconds</span>
+    </div>
     <div class="container">
         <div id="question-container" class="hide">
             <div id="question">Question</div>
@@ -19,10 +22,32 @@
 
             </div>
         </div>
-        <div class="controls"></div>
+        <div class="controls flex-center flex-column"></div>
             <button id="start-btn" class="start-btn btn">Start</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
+            <a class="highscore-btn btn" href="/scores.html">Highscores</a>
     </div>
+
+
+
+    <div id="score" class="end-title score hide">
+        <h1 id="end-title">Quiz Completed!</h1>
+        <p id="score-text">Your final score is: <span id="score">0</span></p>
+        <form id="Submit-score">
+            <label for="initials">Enter initials: </label>
+            <input
+                type="text"
+                name="Name"
+                id="name"
+                placeholder="name"
+            />
+
+            <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)">Submit</button>
+            <p id="error-message"></p>
+        </form>
+        <a href="index.html" class="back-button">Back to main menu</a>
+    </div>
+
         
     <script src="./assets/script.js"></script>
 </body>

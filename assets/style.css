@@ -53,6 +53,7 @@ body.wrong {
     padding: 5px 10px;
     color: white;
     outline: none;
+    margin: 10px;
 }
 .btn:hover {
     border-color:black;
@@ -77,7 +78,47 @@ body.wrong {
     justify-content: center;
     align-items: center;
 }
+.container > * {
+    width: 100%;
+}
 
 .hide {
     display: none;
+}
+
+.score {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.highscore-btn {
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.end-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px, 20px;
+}
+
+.rowheader {
+    font-size: 1.0rem;
+    font-weight: bold;
+    padding: 20px;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:999;
+    height: 23px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 0 10px 2px;
 }
